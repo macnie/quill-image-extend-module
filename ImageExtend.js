@@ -212,6 +212,7 @@ export class ImageExtend {
         let length = (this.quill.getSelection() || {}).index || this.quill.getLength()
         self.quill.insertEmbed(length, 'image', self.imgURL, 'user')
         self.quill.setSelection(length + 1)
+        self.quill.insertEmbed(length+2,'p','')
     }
 
 }
